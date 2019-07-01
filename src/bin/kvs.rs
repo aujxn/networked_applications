@@ -1,8 +1,7 @@
-use std::process::exit;
 pub use kvs::cli;
+use std::process::exit;
 
 fn main() {
-
     let matches = cli::cli();
     match matches.subcommand() {
         ("set", Some(_matches)) => {
@@ -22,5 +21,4 @@ fn main() {
 
         (_, _) => unreachable!(),
     }
-
 }
